@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="web.DemoKendo">
+
+    <parameter name="selenium.url" value="http://commercialtoolsti.tenaris.net/CommercialTools/" />
+
+    <test name="Demo" preserve-order="true">
+        <parameter name="selenium.driver" value="IEDriverServer.exe" />
+        <parameter name="dataProvider" value="kendo.xlsx" />
+        <parameter name="sheet" value="test1" />
+        <classes>
+            <class name="web.DemoKendo">
+                <methods>
+                    <include name="kendoTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
